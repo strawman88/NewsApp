@@ -29,22 +29,20 @@ function HomePage(props) {
 // STATIC SITE GENERATION (snippet: "ngsp")
 export const getStaticProps = async () => {
   // Fetch data from Internal API ("Code News")
-  const response = await fetch(`${process.env.SERVER_NAME}/api/news`);
+  const response = await fetch(`https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=${process.env.NEWS_API_KEY}`);
   const data = await response.json();
+  const articles = data.articles;
 
   if(!response.ok){
     throw new Error(`Failed to fetch posts - Error ${response.status}: ${data.message}`)
   }
 
-  // CHECKER FOR INTERNAL DATA:
-  console.log(data);
-
   // Returned data as props & ISR functionality
   return {
     props: {
-      articles: data
+      articles: articles
     },
-    revalidate: 60 * 60
+    revalidate: 60
   };
 };
 

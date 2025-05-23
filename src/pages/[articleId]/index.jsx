@@ -29,7 +29,7 @@ function ArticleDetailPage(props) {
 export const getStaticPaths = async () => {
   try {
   // (a) Fetches ENTIRE articles array from INTERNAL API
-  const response = await fetch(`${process.env.SERVER_NAME}/api/news`);
+  const response = await fetch(`https://newsapi.org/v2/top-headlines/sources?apiKey=${process.env.NEWS_API_KEY}`);
   const articles = await response.json();
 
   // (b) Pull ALL the ids out of the articles array ONLY
@@ -54,7 +54,7 @@ export const getStaticPaths = async () => {
 export const getStaticProps = async ( context ) => {
   try {
   // (a) Fetches ENTIRE articles array from INTERNAL API
-  const response = await fetch(`${process.env.SERVER_NAME}/api/news`);
+  const response = await fetch(`https://newsapi.org/v2/top-headlines/sources?apiKey=${process.env.NEWS_API_KEY}`);
   const articles = await response.json();
   
   // (b) Store params id value (article USER wants!)
