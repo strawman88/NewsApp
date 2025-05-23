@@ -15,7 +15,7 @@
   .brand {
     font-size: 1.7rem;
     font-weight: 700;
-    text-transform: lowercase;
+    text-transform: uppercase;
     color: color.adjust($brandColor, $lightness: 10%);
     &:hover {
       color: color.adjust($brandColor, $lightness: 35%);

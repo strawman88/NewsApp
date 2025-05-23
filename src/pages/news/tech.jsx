@@ -8,7 +8,7 @@ function TechNewsPage({ techArticles }) {
   return (
     <Fragment>
       <Head>
-        <title>Code-Feed | Top Headlines</title>
+        <title>AUSNEWSHUB | Tech Headlines</title>
         <meta 
           name='description'
           description='Check out the trending tech headlines!'

@@ -10,7 +10,7 @@ function WorldNewsPage(props) {
   return (
     <Fragment>
       <Head>
-        <title>Code-Feed | GlobeFeed</title>
+        <title>AUSNEWSHUB | World News</title>
         <meta 
           name='description'
           description='Browse all the global news of today via BBC News UK'

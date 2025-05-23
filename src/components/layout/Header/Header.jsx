@@ -7,7 +7,7 @@ function Header() {
       <div className={styles.brand}>
         <Link href='/'>
           &lt;
-          <span className={styles.logoCore}>&nbsp;codefeed&nbsp;</span>
+          <span className={styles.logoCore}>&nbsp;AUSNEWSHUB&nbsp;</span>
           &#47;&gt;
         </Link>
       </div>
@@ -17,13 +17,13 @@ function Header() {
             <Link href='/about'><span>About</span>Us</Link>
           </li>
           <li>
-            <Link href='/news/tech'><span>Tech</span>Feed</Link>
+            <Link href='/news/tech'><span>Tech</span>News</Link>
           </li>
           <li>
-            <Link href='/news/aus'><span>Aus</span>Feed</Link>
+            <Link href='/news/aus'><span>Aus</span>News</Link>
           </li>
           <li>
-            <Link href='/news/world'><span>Globe</span>Feed</Link>
+            <Link href='/news/world'><span>Globe</span>News</Link>
           </li>
           <li>
             <Link href='/contact'><span>Contact</span>Us</Link>

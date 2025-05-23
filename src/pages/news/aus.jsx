@@ -10,7 +10,7 @@ function AusNewsPage(props) {
   return (
     <Fragment>
       <Head>
-        <title>Code-Feed | AusFeed</title>
+        <title>AUSNEWSHUB | Aus News</title>
         <meta 
           name='description'
           description='Browse all the Australian news of today via ABC News AU'

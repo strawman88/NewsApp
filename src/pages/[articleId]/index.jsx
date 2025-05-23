@@ -9,7 +9,7 @@ function ArticleDetailPage(props) {
   return (
     <Fragment>
       <Head>
-        <title>{`CodeFeed | ${article.category}`}</title>
+        <title>{`AUSNEWSHUB | ${article.category}`}</title>
         <meta 
           name='description'
           description={article.title + ': ' + article.description}

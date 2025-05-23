@@ -3,7 +3,8 @@
 const AboutPage = () => {
   return <div>
     <h1>About Us</h1>
-    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum, quae consequatur. Nesciunt nostrum perspiciatis fuga voluptates commodi deleniti facilis iusto? Sapiente sequi nobis quos. Vel unde omnis iusto error quod iste libero corrupti sed quae doloribus officiis amet et obcaecati fugit consectetur ipsam, odio qui blanditiis nesciunt atque repellat? In!</p>
+    <p>AUSNEWSHUB delivers the Latest News from Australia and around the World. Based in Australia, our sources are reliable and updated frequently.</p>
+    <p>We welcome suggestions to improve the quality of the content and the layout of our site.</p>
   </div>;
 };
 export default AboutPage;

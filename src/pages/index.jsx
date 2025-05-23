@@ -10,15 +10,15 @@ function HomePage(props) {
   return (
     <Fragment>
       <Head>
-        <title>Code-Feed | Home</title>
+        <title>AUSNEWSHUB | Home</title>
         <meta 
           name='description'
-          description='Browse all the coding news of today from around the globe'
+          description='Browse all the coding news of today from around the globe on AUSNEWSHUB'
         />
       </Head>
       <HeroSection 
-        title='Code' 
-        description='Catch up on all the coding news from around the globe, at the touch of a button'
+        title='Top Headlines' 
+        description='Read the Top Headlines from around the World'
         bgImage="/backgrounds/hero-code.webp"
       />
       {articles.length > 0 && <ArticlesList articles={articles} />}
