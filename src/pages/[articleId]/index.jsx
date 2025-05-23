@@ -27,6 +27,7 @@ function ArticleDetailPage(props) {
 
 // STATIC SITE DYNAMIC PATHS (snippet: "ngspa")
 export const getStaticPaths = async () => {
+  try {
   // (a) Fetches ENTIRE articles array from INTERNAL API
   const response = await fetch(`${process.env.SERVER_NAME}/api/news`);
   const articles = await response.json();
@@ -42,12 +43,16 @@ export const getStaticPaths = async () => {
 
   return {
     paths,
-    fallback: false
+    fallback: false };
+  } catch (error) {
+    console.error('Error in getStaticPaths:', error);
+    return { paths: [], fallback: false };
   }
 }
 
 // STATIC SITE GENERATION (snippet: "ngsp")
 export const getStaticProps = async ( context ) => {
+  try {
   // (a) Fetches ENTIRE articles array from INTERNAL API
   const response = await fetch(`${process.env.SERVER_NAME}/api/news`);
   const articles = await response.json();
@@ -65,6 +70,14 @@ export const getStaticProps = async ( context ) => {
       article: articleMatch[0]
     },
   };
-};
+} catch (error) {
+    console.error('Error in getStaticProps:', error);
+    return {
+      props: {
+        article: null
+      },
+    };
+  }
+}
 
 export default ArticleDetailPage;

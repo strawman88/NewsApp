@@ -40,7 +40,7 @@ module.exports = (phase) => {
   const env = {
     SERVER_NAME: (() => {
       if (isDev) return 'http://localhost:3000/'
-      if (isProd) return 'https://YOUR-DOMAIN-HERE.vercel.app/'
+      if (isProd) return 'https://news-app-pi-black.vercel.app/'
     })(),
     NEWS_API_KEY: process.env.NEWS_API_KEY,
   }
