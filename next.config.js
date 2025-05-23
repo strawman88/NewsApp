@@ -43,6 +43,7 @@ module.exports = (phase) => {
       if (isProd) return 'https://news-app-pi-black.vercel.app/'
     })(),
     NEWS_API_KEY: process.env.NEWS_API_KEY,
+    NEXT_PUBLIC_GA_ID: process.env.NEXT_PUBLIC_GA_ID
   }
 
   // Next.config returns an object

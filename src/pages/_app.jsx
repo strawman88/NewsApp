@@ -9,7 +9,7 @@ function App({ Component, pageProps }) {
   return (
     <Fragment>
       <Script 
-        src={`https://www.googletagmanager.com/gtag/js?id=G-2GBM02K875`}
+        src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`}
         strategy="afterInteractive"
       />
       <Script
@@ -20,7 +20,7 @@ function App({ Component, pageProps }) {
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
 
-        gtag('config', 'G-2GBM02K875');`}
+        gtag('config', '${process.env.NEXT_PUBLIC_GA_ID}');`}
       </Script>
       <Head>
         <link rel="shortcut icon" href="/images/favicon.ico" />
