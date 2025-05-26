@@ -6,6 +6,10 @@ import ArticleDetail from '@/components/features/articles/ArticleDetail';
 function ArticleDetailPage(props) {
   const { article } = props;
 
+  if (!article) {
+    return <div>Article not found.</div>;
+  }
+
   return (
     <Fragment>
       <Head>
@@ -79,7 +83,7 @@ export const getStaticPaths = async () => {
 export const getStaticProps = async ( context ) => {
   try {
   // (a) Fetches ENTIRE articles array from INTERNAL API
-  const response = await fetch(`https://newsapi.org/v2/top-headlines/sources?apiKey=${process.env.NEWS_API_KEY}`);
+  const response = await fetch(`https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=${process.env.NEWS_API_KEY}`);
   const articles = await response.json();
   
   // (b) Store params id value (article USER wants!)
@@ -92,7 +96,7 @@ export const getStaticProps = async ( context ) => {
 
   return {
     props: {
-      article: articleMatch[0]
+      article: articleMatch[0] || null
     },
   };
 } catch (error) {
