@@ -11,22 +11,36 @@ function Header() {
           &#47;&gt;
         </Link>
       </div>
-      <nav>
-        <ul>
+      <nav className={styles.navContainer}>
+        <ul className={styles.mainLinks}>
           <li>
             <Link href='/about'><span>About</span>Us</Link>
           </li>
           <li>
+            <Link href='/faq'><span>FAQ</span></Link>
+          </li>
+          <li>
+            <Link href='/contact'><span>Contact</span>Us</Link>
+          </li>
+        </ul>
+        <ul className={styles.newsLinks}>
+          <li>
             <Link href='/news/tech'><span>Tech</span>News</Link>
+          </li>
+          <li>
+            <Link href='/news/health'><span>Health</span>News</Link>
+          </li>
+          <li>
+            <Link href='/news/science'><span>Science</span>News</Link>
+          </li>
+          <li>
+            <Link href='/news/sports'><span>Sports</span>News</Link>
           </li>
           <li>
             <Link href='/news/aus'><span>Aus</span>News</Link>
           </li>
           <li>
             <Link href='/news/world'><span>Globe</span>News</Link>
-          </li>
-          <li>
-            <Link href='/contact'><span>Contact</span>Us</Link>
           </li>
         </ul>
       </nav>

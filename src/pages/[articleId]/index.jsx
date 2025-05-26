@@ -26,29 +26,54 @@ function ArticleDetailPage(props) {
 }
 
 // STATIC SITE DYNAMIC PATHS (snippet: "ngspa")
+// export const getStaticPaths = async () => {
+//   try {
+//   // (a) Fetches ENTIRE articles array from INTERNAL API
+//   const response = await fetch(`https://newsapi.org/v2/top-headlines/sources?apiKey=${process.env.NEWS_API_KEY}`);
+//   const articles = await response.json();
+
+//   // (b) Pull ALL the ids out of the articles array ONLY
+//   const idList = articles.map((news) => news.id);
+
+//   // (c) Pre-build ALL the URL paths for all existing ids in array 
+//   const paths = idList.map((id) => (
+//     { params: { articleId: id.toString() }}
+//   ));
+//   // NOTE: The id MUST be converted to a string, as URLs need strings NOT numbers!
+
+//   return {
+//     paths,
+//     fallback: false };
+//   } catch (error) {
+//     console.error('Error in getStaticPaths:', error);
+//     return { paths: [], fallback: false };
+//   }
+// }
+
 export const getStaticPaths = async () => {
   try {
-  // (a) Fetches ENTIRE articles array from INTERNAL API
-  const response = await fetch(`https://newsapi.org/v2/top-headlines/sources?apiKey=${process.env.NEWS_API_KEY}`);
-  const articles = await response.json();
+    const response = await fetch(`https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=${process.env.NEWS_API_KEY}`);
+    const data = await response.json();
+    const articles = data.articles || [];
 
-  // (b) Pull ALL the ids out of the articles array ONLY
-  const idList = articles.map((news) => news.id);
+    const idList = articles.map((news, idx) => {
+      // If articles don't have an id, use idx or another unique property
+      return news.id ? news.id.toString() : idx.toString();
+    });
 
-  // (c) Pre-build ALL the URL paths for all existing ids in array 
-  const paths = idList.map((id) => (
-    { params: { articleId: id.toString() }}
-  ));
-  // NOTE: The id MUST be converted to a string, as URLs need strings NOT numbers!
+    const paths = idList.map((id) => ({
+      params: { articleId: id }
+    }));
 
-  return {
-    paths,
-    fallback: false };
+    return {
+      paths,
+      fallback: false
+    };
   } catch (error) {
     console.error('Error in getStaticPaths:', error);
     return { paths: [], fallback: false };
   }
-}
+};
 
 // STATIC SITE GENERATION (snippet: "ngsp")
 export const getStaticProps = async ( context ) => {
