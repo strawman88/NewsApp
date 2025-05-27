@@ -80,26 +80,58 @@ export const getStaticPaths = async () => {
 };
 
 // STATIC SITE GENERATION (snippet: "ngsp")
+// export const getStaticProps = async ( context ) => {
+//   try {
+//   // (a) Fetches ENTIRE articles array from INTERNAL API
+//   const response = await fetch(`https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=${process.env.NEWS_API_KEY}`);
+//   const articles = await response.json();
+  
+//   // (b) Store params id value (article USER wants!)
+//   const articleQuery = context.params.articleId;
+
+//   // (c) Filters articles array to match & return article passed in params
+//   const articleMatch = articles.filter(
+//     (article) => article.id.toString() === articleQuery 
+//   )
+
+//   return {
+//     props: {
+//       article: articleMatch[0] || null
+//     },
+//   };
+// } catch (error) {
+//     console.error('Error in getStaticProps:', error);
+//     return {
+//       props: {
+//         article: null
+//       },
+//     };
+//   }
+// }
+
 export const getStaticProps = async ( context ) => {
   try {
-  // (a) Fetches ENTIRE articles array from INTERNAL API
-  const response = await fetch(`https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=${process.env.NEWS_API_KEY}`);
-  const articles = await response.json();
-  
-  // (b) Store params id value (article USER wants!)
-  const articleQuery = context.params.articleId;
+    // Fetch articles from NewsAPI
+    const response = await fetch(`https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=${process.env.NEWS_API_KEY}`);
+    const data = await response.json();
+    const articles = data.articles || [];
+    
+    // Get the articleId from params
+    const articleQuery = context.params.articleId;
 
-  // (c) Filters articles array to match & return article passed in params
-  const articleMatch = articles.filter(
-    (article) => article.id.toString() === articleQuery 
-  )
+    // Use index as fallback if no id property
+    const articleMatch = articles.filter(
+      (article, idx) =>
+        (article.id && article.id.toString() === articleQuery) ||
+        (!article.id && idx.toString() === articleQuery)
+    );
 
-  return {
-    props: {
-      article: articleMatch[0] || null
-    },
-  };
-} catch (error) {
+    return {
+      props: {
+        article: articleMatch[0] || null
+      },
+    };
+  } catch (error) {
     console.error('Error in getStaticProps:', error);
     return {
       props: {
