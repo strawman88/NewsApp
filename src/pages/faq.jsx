@@ -13,13 +13,13 @@ function Faq() {
       <p>You can't.</p>
       <h2>How do I contribute?</h2>
       <p>By smiling. :-)</p>
-      <h2>Who's you favourite IT teachers?</h2>
+      <h2>Who are your favourite IT teachers?</h2>
       <p>Dan & Alex of course!</p>
       <h2>Did I really need to know this?</h2>
       <p>Probably not, but you read it anyway!</p>
       <h2>Can I ask a question?</h2>
-      <p>Yes, but you won't get an answer.</p>
-      <h3>Thanks for stopping by!</h3>
+      <p>Yes, but you won't get an answer. 😉</p>
+      <h3>Thanks for stopping by! 👋</h3>
     </div>
   )
 }

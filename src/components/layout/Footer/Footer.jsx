@@ -8,11 +8,12 @@ function Footer() {
   return (
     <div className={styles.footerbottom}>
       <div className="container">
-        <p className="text-right pr-5">
-          &copy; {getCurrentYear()} ALL RIGHTS RESERVED | AUSNEWSHUB
+        <p className={styles.footerText}>
+          <a href="/">AUSNEWSHUB</a> is a news website that provides the latest updates on technology, health, science, sports, Australian news, and world news. We are committed to delivering accurate and timely information to our readers. &copy; {getCurrentYear()} ALL RIGHTS RESERVED | <a href="/">AUSNEWSHUB</a>
         </p>
+
         <p>
-          Image by{' '}
+          Images by{' '}
           <a
             href="https://pixabay.com/users/qimono-1962238/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=1756274"
             target="_blank"
@@ -27,10 +28,7 @@ function Footer() {
             rel="noopener noreferrer"
           >
             Pixabay
-          </a>
-        </p>
-        <p>
-          Image by{' '}
+          </a> and&nbsp;
           <a
             href="https://pixabay.com/users/schuetz-mediendesign-608937/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=546794"
             target="_blank"

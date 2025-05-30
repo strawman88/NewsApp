@@ -27,13 +27,13 @@
       font-size: 0.9em;
       color: $primaryColor;
       font-weight: 600;
-      margin: 0.5rem 0;
+      margin: 0.5rem 0.3rem 0.9rem 0.3rem;
     }
 
     hr {
       margin: 0.5rem 0;
       border: none;
-      border-top: 2px solid $highlightColor;
+      border-top: 2px solid $hrColor;
     }
   }
 }

@@ -41,23 +41,6 @@
     li {
       margin-left: 1rem;
     }
-  
-    a {
-      color: $highlightColor;
-      font-size: 1em;
-      font-weight: 400;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      text-decoration: none;
-
-      span {
-        font-weight: 700;
-      }
-  
-      &:hover, &:active {
-        color: color.adjust($brandColor, $lightness: 35%);
-      }
-    }
   }
 }
 
@@ -73,6 +56,23 @@
   list-style: none;
   padding: 0;
   justify-content: flex-end;
+
+  a {
+      color: $brandColor;
+      font-size: 1em;
+      font-weight: 400;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      text-decoration: none;
+
+      span {
+        font-weight: 700;
+      }
+  
+      &:hover, &:active {
+        color: color.adjust($brandColor, $lightness: 35%);
+      }
+    }
 }
 
 .newsLinks {
@@ -85,16 +85,47 @@
   justify-content: flex-end;
   background: inherit;
 
+  a {
+      color: $primaryColor;
+      font-size: 1em;
+      font-weight: 400;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      text-decoration: none;
+
+      span {
+        font-weight: 700;
+      }
+  
+      // &:hover, &:active {
+      //   color: color.adjust($brandColor, $lightness: 35%);
+      // }
+    }
+
   button {
-    color: $highlightColor;
+    color: #fff;
     font-size: 0.8em;
     font-weight: 400;
     letter-spacing: 1px;
     text-transform: uppercase;
     cursor: pointer;
+    border-radius: 15px;
+    padding: 0.3rem 1rem;
+    background: linear-gradient(
+      to right,
+      color.adjust($primaryColor, $lightness: 0%),
+      color.adjust($complementaryColor, $lightness: 25%),
+      color.adjust($complementaryColor, $lightness: 15%)
+    );
+    border: 1px solid $primaryColor;
 
     &:hover, &:active {
-      color: color.adjust($brandColor, $lightness: 25%);
+      background: linear-gradient(
+      to right,
+      color.adjust($primaryColor, $lightness: 0%),
+      color.adjust($complementaryColor, $lightness: 20%),
+      color.adjust($complementaryColor, $lightness: 10%)
+    );
     }
   }
 }

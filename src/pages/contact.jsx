@@ -1,12 +1,28 @@
-// [2A] BASIC ROUTES - URL: https://localhost:3000/about
-import React from 'react'
+import React from 'react';
 
 function ContactPage() {
   return (
-  <div className="contact-page">
-    <h1>Contact Us</h1>
-    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum, quae consequatur. Nesciunt nostrum perspiciatis fuga voluptates commodi deleniti facilis iusto? Sapiente sequi nobis quos. Vel unde omnis iusto error quod iste libero corrupti sed quae doloribus officiis amet et obcaecati fugit consectetur ipsam, odio qui blanditiis nesciunt atque repellat? In!</p>
-  </div>
-  )
-};
+    <div className="contact-page">
+      <h1>Contact Us</h1>
+      <p>
+        Reach out to AUSNEWSHUB for all enquiries. We’re here to help!
+      </p>
+      <ul className="contact-details">
+        <li>
+          <strong>Address:</strong> 123 Main Street, Suite 400, New York, NY 10001
+        </li>
+        <li>
+          <strong>Phone:</strong> (212) 555-1234
+        </li>
+        <li>
+          <strong>Email:</strong> <a href="mailto:info@ausnewshub.com">info@ausnewshub.com</a>
+        </li>
+        <li>
+          <strong>Business Hours:</strong> Mon–Fri, 9am–6pm
+        </li>
+      </ul>
+    </div>
+  );
+}
+
 export default ContactPage;
