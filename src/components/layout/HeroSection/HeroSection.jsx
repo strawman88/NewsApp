@@ -10,7 +10,7 @@ function HeroSection({ title, description, bgImage }) {
       style={{ backgroundImage: `url(${bgImage})` }}
     >
       <div className={styles.overlay}>
-        <h1><span>{title}</span>news</h1>
+        <h1><span>{title}</span></h1>
         <p>{description}</p>
       </div>
       

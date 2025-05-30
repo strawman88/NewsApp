@@ -15,7 +15,7 @@ function ScienceNewsPage({ scienceArticles }) {
         />
       </Head>
       <HeroSection 
-        title='Science' 
+        title='Science News' 
         description='Catch up on Top Science News from around the globe'
         bgImage="/backgrounds/hero-news.webp"
       />

@@ -15,7 +15,7 @@ function HealthNewsPage({ healthArticles }) {
         />
       </Head>
       <HeroSection 
-        title='Health' 
+        title='Health News' 
         description='Catch up on Top Health News from around the globe'
         bgImage="/backgrounds/hero-news.webp"
       />

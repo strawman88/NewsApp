@@ -15,7 +15,7 @@ function SportsNewsPage({ sportsArticles }) {
         />
       </Head>
       <HeroSection 
-        title='Sports' 
+        title='Sports News' 
         description='Catch up on Top Sports News from around the globe'
         bgImage="/backgrounds/hero-news.webp"
       />

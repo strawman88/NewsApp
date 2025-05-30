@@ -17,7 +17,7 @@ function HomePage(props) {
         />
       </Head>
       <HeroSection 
-        title='Top Headlines' 
+        title='Top News Headlines' 
         description='Read the Top Headlines from around the World'
         bgImage="/backgrounds/hero-code.webp"
       />
