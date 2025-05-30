@@ -29,30 +29,30 @@ function ArticleDetailPage(props) {
   );
 }
 
-// export const getStaticPaths = async () => {
-//   try {
-//     const response = await fetch(`https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=${process.env.NEWS_API_KEY}`);
-//     const data = await response.json();
-//     const articles = data.articles || [];
+export const getStaticPaths = async () => {
+  try {
+    const response = await fetch(`https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=${process.env.NEWS_API_KEY}`);
+    const data = await response.json();
+    const articles = data.articles || [];
 
-//     const idList = articles.map((news, idx) => {
-//       // If articles don't have an id, use idx or another unique property
-//       return news.id ? news.id.toString() : idx.toString();
-//     });
+    const idList = articles.map((news, idx) => {
+      // If articles don't have an id, use idx or another unique property
+      return news.id ? news.id.toString() : idx.toString();
+    });
 
-//     const paths = idList.map((id) => ({
-//       params: { articleId: id }
-//     }));
+    const paths = idList.map((id) => ({
+      params: { articleId: id }
+    }));
 
-//     return {
-//       paths,
-//       fallback: false
-//     };
-//   } catch (error) {
-//     console.error('Error in getStaticPaths:', error);
-//     return { paths: [], fallback: false };
-//   }
-// };
+    return {
+      paths,
+      fallback: false
+    };
+  } catch (error) {
+    console.error('Error in getStaticPaths:', error);
+    return { paths: [], fallback: false };
+  }
+};
 
 export const getStaticProps = async ( context ) => {
   try {
