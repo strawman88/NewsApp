@@ -34,6 +34,14 @@ module.exports = (phase) => {
         protocol: 'https',
         hostname: '**.**.**',
       },
+      {
+      protocol: 'https',
+      hostname: 'theacc.com',
+      },
+      {
+      protocol: 'http',
+      hostname: 'theacc.com',
+      },
     ]
   }
 

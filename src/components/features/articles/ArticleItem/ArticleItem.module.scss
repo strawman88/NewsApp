@@ -1,7 +1,7 @@
 @use '@/styles/scss/abstracts/' as *;
 
 .articleMain {
-  text-align: center;
+  text-align: left;
 
   .imageBox {
     height: 19vh;
@@ -19,7 +19,7 @@
     margin: 0rem;
 
     h2 {
-      font-size: 1em;
+      font-size: 1.2em;
       color: $primaryColor;
     }
 
@@ -28,6 +28,12 @@
       color: $primaryColor;
       font-weight: 600;
       margin: 0.5rem 0;
+    }
+
+    hr {
+      margin: 0.5rem 0;
+      border: none;
+      border-top: 2px solid $highlightColor;
     }
   }
 }

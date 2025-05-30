@@ -17,7 +17,7 @@ function SportsNewsPage({ sportsArticles }) {
       <HeroSection 
         title='Sports News' 
         description='Catch up on Top Sports News from around the globe'
-        bgImage="/backgrounds/hero-news.webp"
+        bgImage="/backgrounds/background.jpg"
       />
       {sportsArticles.length > 0 && <ArticlesList 
         articles={sportsArticles} 

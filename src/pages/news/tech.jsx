@@ -17,7 +17,7 @@ function TechNewsPage({ techArticles }) {
       <HeroSection 
         title='Tech News' 
         description='Catch up on Top Tech News from around the globe'
-        bgImage="/backgrounds/hero-news.webp"
+        bgImage="/backgrounds/background.jpg"
       />
       {techArticles.length > 0 && <ArticlesList 
         articles={techArticles} 

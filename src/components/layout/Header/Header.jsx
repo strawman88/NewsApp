@@ -6,7 +6,7 @@ function Header() {
     <header className={styles.header}>
       <div className={styles.brand}>
         <Link href='/'>
-          <span className={styles.logoCore}>AUSNEWSHUB</span>
+          AUS<span className={styles.logoCore}>NEWS</span>HUB
         </Link>
       </div>
       <nav className={styles.navContainer}>
@@ -39,7 +39,7 @@ function Header() {
             <Link href='/news/aus'><span>Aus</span>News</Link>
           </button>
           <button>
-            <Link href='/news/world'><span>Globe</span>News</Link>
+            <Link href='/news/world'><span>World</span>News</Link>
           </button>
         </ul>
       </nav>

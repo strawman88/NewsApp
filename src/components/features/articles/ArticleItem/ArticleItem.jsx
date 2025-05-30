@@ -37,6 +37,7 @@ function ArticleItem(props) {
         </div>
         <div className={styles.articleContent}>
           <h2>{props.title}</h2>
+          <hr />
           <p>{props.description}</p>
         </div>
       </div>

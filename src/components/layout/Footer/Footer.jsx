@@ -11,6 +11,42 @@ function Footer() {
         <p className="text-right pr-5">
           &copy; {getCurrentYear()} ALL RIGHTS RESERVED | AUSNEWSHUB
         </p>
+        <p>
+          Image by{' '}
+          <a
+            href="https://pixabay.com/users/qimono-1962238/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=1756274"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Arek Socha
+          </a>{' '}
+          from{' '}
+          <a
+            href="https://pixabay.com/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=1756274"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Pixabay
+          </a>
+        </p>
+        <p>
+          Image by{' '}
+          <a
+            href="https://pixabay.com/users/schuetz-mediendesign-608937/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=546794"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Christoph Schütz
+          </a>{' '}
+          from{' '}
+          <a
+            href="https://pixabay.com/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=546794"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Pixabay
+          </a>
+        </p>
       </div>
     </div>
   );

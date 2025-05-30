@@ -17,7 +17,7 @@ function ScienceNewsPage({ scienceArticles }) {
       <HeroSection 
         title='Science News' 
         description='Catch up on Top Science News from around the globe'
-        bgImage="/backgrounds/hero-news.webp"
+        bgImage="/backgrounds/background.jpg"
       />
       {scienceArticles.length > 0 && <ArticlesList 
         articles={scienceArticles} 

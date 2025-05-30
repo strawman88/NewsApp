@@ -17,7 +17,7 @@ function HealthNewsPage({ healthArticles }) {
       <HeroSection 
         title='Health News' 
         description='Catch up on Top Health News from around the globe'
-        bgImage="/backgrounds/hero-news.webp"
+        bgImage="/backgrounds/background.jpg"
       />
       {healthArticles.length > 0 && <ArticlesList 
         articles={healthArticles} 
