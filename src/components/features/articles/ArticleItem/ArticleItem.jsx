@@ -48,7 +48,7 @@ function ArticleItem(props) {
           </Button>
         : 
           <ButtonLink path={props.url} target="_blank">
-            Link to Article
+            Read More
           </ButtonLink>
         }
       </div>

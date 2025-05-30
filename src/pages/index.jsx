@@ -28,7 +28,7 @@ function HomePage(props) {
 
 // STATIC SITE GENERATION (snippet: "ngsp")
 export const getStaticProps = async () => {
-  const response = await fetch(`https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=${process.env.NEWS_API_KEY}`);
+  const response = await fetch(`https://newsapi.org/v2/top-headlines?sources=bbc-news&pageSize=20&apiKey=${process.env.NEWS_API_KEY}`);
   const data = await response.json();
   const articles = data.articles;
   

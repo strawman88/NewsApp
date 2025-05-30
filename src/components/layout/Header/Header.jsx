@@ -6,42 +6,41 @@ function Header() {
     <header className={styles.header}>
       <div className={styles.brand}>
         <Link href='/'>
-          &lt;
-          <span className={styles.logoCore}>&nbsp;AUSNEWSHUB&nbsp;</span>
-          &#47;&gt;
+          <span className={styles.logoCore}>AUSNEWSHUB</span>
         </Link>
       </div>
       <nav className={styles.navContainer}>
         <ul className={styles.mainLinks}>
           <li>
-            <Link href='/about'><span>About</span>Us</Link>
+            <Link href='/about'><span>About</span></Link>
           </li>
           <li>
             <Link href='/faq'><span>FAQ</span></Link>
           </li>
           <li>
-            <Link href='/contact'><span>Contact</span>Us</Link>
+            <Link href='/contact'><span>Contact</span></Link>
           </li>
         </ul>
+        
         <ul className={styles.newsLinks}>
-          <li>
+          <button>
             <Link href='/news/tech'><span>Tech</span>News</Link>
-          </li>
-          <li>
+          </button>
+          <button>
             <Link href='/news/health'><span>Health</span>News</Link>
-          </li>
-          <li>
+          </button>
+          <button>
             <Link href='/news/science'><span>Science</span>News</Link>
-          </li>
-          <li>
+          </button>
+          <button>
             <Link href='/news/sports'><span>Sports</span>News</Link>
-          </li>
-          <li>
+          </button>
+          <button>
             <Link href='/news/aus'><span>Aus</span>News</Link>
-          </li>
-          <li>
+          </button>
+          <button>
             <Link href='/news/world'><span>Globe</span>News</Link>
-          </li>
+          </button>
         </ul>
       </nav>
     </header>

@@ -13,7 +13,7 @@
   z-index: 1;
 
   .brand {
-    font-size: 1.7rem;
+    font-size: 1.6rem;
     font-weight: 700;
     text-transform: uppercase;
     color: color.adjust($brandColor, $lightness: 10%);
@@ -33,18 +33,18 @@
     ul {
       list-style: none;
       margin: 0;
-      padding: 0;
+      padding: 0 0 0.3rem 0;
       display: flex;
       align-items: baseline;
     }
   
     li {
-      margin-left: 3rem;
+      margin-left: 1rem;
     }
   
     a {
       color: $highlightColor;
-      font-size: 1.2em;
+      font-size: 1em;
       font-weight: 400;
       letter-spacing: 1px;
       text-transform: uppercase;
@@ -82,6 +82,21 @@
   padding: 0;
   margin: 0;
   width: 100%;
-  justify-content: space-between;
+  justify-content: flex-end;
   background: inherit;
+
+  button {
+    // background: none;
+    // border: none;
+    color: $highlightColor;
+    font-size: 0.8em;
+    font-weight: 400;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+
+    &:hover, &:active {
+      color: color.adjust($brandColor, $lightness: 25%);
+    }
+  }
 }
