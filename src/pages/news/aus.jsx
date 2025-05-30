@@ -39,10 +39,13 @@ export const getStaticProps = async () => {
     throw new Error(`Failed to fetch posts - Error ${response.status}: ${data.message}`)
   }
 
+  // Filter data to remove BAD / NO IMAGES
+  let sanitisedArticles = articles.filter(article => article.urlToImage !== null);
+
   // Returned data as props
   return {
     props: {
-      ausArticles: articles
+      ausArticles: sanitisedArticles
     },
     revalidate: 60
   };

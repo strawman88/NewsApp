@@ -40,10 +40,27 @@ export const getServerSideProps = async (context) => {
     throw new Error(`Failed to fetch posts - Error ${response.status}: ${data.message}`)
   }
 
+  const isBulletin = article => {
+  // Check if description matches known bulletin text
+  const bulletinDescription = "The latest five minute news bulletin from BBC World Service.";
+  // Check if title looks like a date/time (e.g., starts with DD/MM/YYYY)
+  const datePattern = /^\d{2}\/\d{2}\/\d{4}/;
+  return (
+    (article.description && article.description.trim() === bulletinDescription) ||
+    (article.title && datePattern.test(article.title))
+  );
+};
+
+// Filter data to remove BAD / NO IMAGES and bulletins
+let sanitisedArticles = articles.filter(
+  article =>
+    article.urlToImage &&
+    !isBulletin(article)
+);
   // Returned data as props
   return {
     props: {
-      worldArticles: articles
+      worldArticles: sanitisedArticles
     }
   };
 };
