@@ -11,11 +11,14 @@ const NotFoundPage = () => {
           <Image 
             src={notFound}
             alt="not found 404" 
-            height="80"
-            width="90"
+            height="250"
+            width="400"
           />
         </span>
-        <Link href="/">This page could not be found</Link>
+        <div>
+          <h1>Sorry this page cannot be found</h1>
+          <Link href="/">Return Home</Link>
+        </div>
       </div>
     </div>
   )

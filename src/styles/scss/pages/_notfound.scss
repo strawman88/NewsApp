@@ -19,18 +19,28 @@
   span {
     margin: 0;
     padding: 2rem;
-    border-right: 2px solid $highlightColor;
+    border-right: 3px solid $highlightColor;
     font-size: 2em;
     font-weight: normal;
+  }
+
+  h1 {
+    margin: 0;
+    padding: 2rem;
+    font-size: 2em;
+    font-weight: normal;
+    color: $brandColor;
   }
 
   a {
     padding: 2rem;
     font-size: 1em;
     text-decoration: none;
+    color: $brandColor;
 
     &:hover {
-      color: $brandColor;
+      color: $hoverColor;
+      text-decoration: underline;
     }
   }
 }

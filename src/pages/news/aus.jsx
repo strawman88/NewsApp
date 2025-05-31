@@ -20,6 +20,7 @@ function AusNewsPage(props) {
         title='Aus News' 
         description='Catch up on all Australian News via ABC News'
         bgImage="/backgrounds/background.jpg"
+        alt="Australian landscape background image"
       />
       {/* Refactored Render */}
       {ausArticles.length > 0 && <ArticlesList articles={ausArticles} />}

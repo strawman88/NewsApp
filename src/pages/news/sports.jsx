@@ -18,6 +18,7 @@ function SportsNewsPage({ sportsArticles }) {
         title='Sports News' 
         description='Catch up on Top Sports News from around the globe'
         bgImage="/backgrounds/background.jpg"
+        alt="Australian landscape background image"
       />
       {sportsArticles.length > 0 && <ArticlesList 
         articles={sportsArticles} 
@@ -28,7 +29,7 @@ function SportsNewsPage({ sportsArticles }) {
 
 export const getStaticProps = async () => {
   // External API Request: sports Category
-  const response = await fetch(`https://newsapi.org/v2/top-headlines?category=sports&sortBy=publishedAt&pageSize=20&page=1&apiKey=${process.env.NEWS_API_KEY}`);
+  const response = await fetch(`https://newsapi.org/v2/top-headlines?category=sports&sortBy=publishedAt&pageSize=10&page=1&apiKey=${process.env.NEWS_API_KEY}`);
   const data = await response.json();
   const articles = data.articles;
   // console.log(articles);

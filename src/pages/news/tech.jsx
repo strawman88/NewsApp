@@ -18,6 +18,7 @@ function TechNewsPage({ techArticles }) {
         title='Tech News' 
         description='Catch up on Top Tech News from around the globe'
         bgImage="/backgrounds/background.jpg"
+        alt="Australian landscape background image"
       />
       {techArticles.length > 0 && <ArticlesList 
         articles={techArticles} 
@@ -28,7 +29,7 @@ function TechNewsPage({ techArticles }) {
 
 export const getStaticProps = async () => {
   // External API Request: Tech Category
-  const response = await fetch(`https://newsapi.org/v2/top-headlines?category=technology&sortBy=publishedAt&pageSize=20&page=1&apiKey=${process.env.NEWS_API_KEY}`);
+  const response = await fetch(`https://newsapi.org/v2/top-headlines?category=technology&sortBy=publishedAt&pageSize=10&page=1&apiKey=${process.env.NEWS_API_KEY}`);
   const data = await response.json();
   const articles = data.articles;
   // console.log(articles);

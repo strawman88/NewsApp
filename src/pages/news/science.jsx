@@ -18,6 +18,7 @@ function ScienceNewsPage({ scienceArticles }) {
         title='Science News' 
         description='Catch up on Top Science News from around the globe'
         bgImage="/backgrounds/background.jpg"
+        alt="Australian landscape background image"
       />
       {scienceArticles.length > 0 && <ArticlesList 
         articles={scienceArticles} 
@@ -28,7 +29,7 @@ function ScienceNewsPage({ scienceArticles }) {
 
 export const getStaticProps = async () => {
   // External API Request: Tech Category
-  const response = await fetch(`https://newsapi.org/v2/top-headlines?category=science&sortBy=publishedAt&pageSize=20&page=1&apiKey=${process.env.NEWS_API_KEY}`);
+  const response = await fetch(`https://newsapi.org/v2/top-headlines?category=science&sortBy=publishedAt&pageSize=10&page=1&apiKey=${process.env.NEWS_API_KEY}`);
   const data = await response.json();
   const articles = data.articles;
   // console.log(articles);
