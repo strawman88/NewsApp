@@ -19,7 +19,7 @@ function HomePage(props) {
       <HeroSection 
         title='Top News Headlines' 
         description='Read the Top Headlines from around the World'
-        bgImage="/backgrounds/earth.jpg"
+        bgImage="/backgrounds/earth.webp"
         alt="Earth Background Image"
       />
       {articles.length > 0 && <ArticlesList articles={articles} />}

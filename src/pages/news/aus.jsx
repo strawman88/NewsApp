@@ -19,7 +19,7 @@ function AusNewsPage(props) {
       <HeroSection 
         title='Aus News' 
         description='Catch up on all Australian News via ABC News'
-        bgImage="/backgrounds/background.jpg"
+        bgImage="/backgrounds/background.webp"
         alt="Australian landscape background image"
       />
       {/* Refactored Render */}

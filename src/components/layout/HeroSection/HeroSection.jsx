@@ -1,8 +1,6 @@
 import styles from './HeroSection.module.scss';
 
-
 function HeroSection({ title, description, bgImage }) {
-
   return (
     <div 
       className={styles.showcase}

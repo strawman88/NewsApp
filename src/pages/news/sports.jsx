@@ -17,7 +17,7 @@ function SportsNewsPage({ sportsArticles }) {
       <HeroSection 
         title='Sports News' 
         description='Catch up on Top Sports News from around the globe'
-        bgImage="/backgrounds/background.jpg"
+        bgImage="/backgrounds/background.webp"
         alt="Australian landscape background image"
       />
       {sportsArticles.length > 0 && <ArticlesList 

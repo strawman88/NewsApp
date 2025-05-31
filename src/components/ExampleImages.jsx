@@ -4,13 +4,13 @@ function ExampleImages() {
   return (
     <div>
       <Image
-        src="/backgrounds/earth.jpg"
+        src="/backgrounds/earth.webp"
         width={800}
         height={400}
         alt="View of Earth from space"
       />
       <Image
-        src="/backgrounds/background.jpg"
+        src="/backgrounds/background.webp"
         width={800}
         height={400}
         alt="Australian landscape background image"

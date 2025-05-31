@@ -19,7 +19,7 @@ function WorldNewsPage(props) {
       <HeroSection 
         title='World News' 
         description='Catch up on all the world news via BBC News'
-        bgImage="/backgrounds/background.jpg"
+        bgImage="/backgrounds/background.webp"
         alt="Australian landscape background image"
       />
       {/* SSG Render */}
