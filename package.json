@@ -10,6 +10,7 @@
     "build:scss": "sass --no-source-map src/styles/scss/main.scss:src/styles/globals.css"
   },
   "dependencies": {
+    "@vercel/analytics": "^1.5.0",
     "next": "15.3.1",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",

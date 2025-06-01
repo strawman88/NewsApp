@@ -6,6 +6,7 @@ import { useRouter } from 'next/router';
 import '@/styles/scss/main.scss'
 import Layout from '@/components/layout';
 import * as ga from '../lib/google-analytics';
+import { Analytics } from "@vercel/analytics/next";
 
 function App({ Component, pageProps }) {
   // Setup for Google Analytics page views
@@ -43,6 +44,7 @@ function App({ Component, pageProps }) {
 
         gtag('config', '${process.env.NEXT_PUBLIC_GA_ID}');`}
       </Script>
+      <Analytics />
       <Head>
         <link rel="shortcut icon" href="/images/favicon.ico" />
       </Head>
